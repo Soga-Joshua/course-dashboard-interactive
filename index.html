@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE-DASHBOARD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type href="assets/CSS/style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <section class="sidenav">
+            <div class="containernav">
+                <img src="assets/img/Instincthub logo.png" alt="InstinctHub Logo"> 
+            </div>
+            <!-- /////////////
+            Javascript added for side nav
+            ////////////////////-->
+            <ul>
+                <li onmouseover="MoveDiv()" onmouseleave="RemoveDiv()"><img src="/assets/img/bx_bxs-dashboard.png" alt="overviewlogo"> <div id="color1" class="color"></div><p id="overPos" class="overpos">Overview</p></li>
+                <li><img class="pos" src="/assets/img/akar-icons_file.png" alt="classlogo"><div class="color"></div><p class="overpos2">Classes</p></li>
+                <li><img class="pos" src="/assets/img/codicon_graph.png" alt="Analyticslogo"><div class="color"></div><p class="overpos3">Analytics</p></li>
+                <li
+                ><img class="pos" src="/assets/img/ic_baseline-group.png" alt="communitylogo"><div class="color"></div><p class="overpos4">Community</p></li>
+                <li><img class="pos" src="/assets/img/fe_logout.png" alt="Logoutlogo"><div class="color"></div><p class="overpos5">Logout</p></li>
+            </ul>
+            <div class="upgrade">
+                <img src="assets/img/Upgrade illustration.png" alt="upgrade">
+                <div class="firsttext">
+                    <p>Upgrade your student portal account</p>
+                </div>
+                
+                <div class="upgradebutton">
+                    <p>Upgrade</p>
+                </div>
+            </div>
+        </section><!-- sidenav end -->
+        <section class="main">
+            <div class="header">
+                <h1>My course dashboard</h1>
+                <div class="search">
+                    <form action="">
+                        <input type="text" name="search" placeholder="You are looking for..." class="searchbar">
+                    </form>
+                    <div class="icons">
+                        <img class="SIC" src="assets/img/bx_bx-search.png" alt="search">
+                        <img class="bell" src="assets/img/codicon_bell-dot.png" alt="notify">
+                        <img class="userp" src="assets/img/User profile.png" alt="userprofile">
+                    </div>
+                </div><!-- search end -->
+            </div><!-- header end -->
+            <div class="mainwrapper">
+                <div class="charts">
+                    <div class="doughnutsection1">
+                        <div class="doughnut">
+                            <canvas id="Daily" width="600" height="400"></canvas>
+                        </div>
+                        <h2>71%</h2>
+                        <div class="daily">
+                            <h3>Daily</h3>
+                            <p>Activities</p>
+                        </div>
+                    </div>
+                    <div class="doughnutsection2">
+                        <div class="doughnut">
+                            <canvas id="Monthly" width="600" height="400"></canvas>
+                        </div>
+                        <h2>20%</h2>
+                        <div class="Monthly">
+                            <h3>Monthly</h3>
+                            <p>Activities</p>
+                        </div>
+                    </div>
+                    <div class="doughnutsection3">
+                        <div class="doughnut">
+                            <canvas id="Yearly" width="600" height="400"></canvas>
+                        </div>
+                        <h2>12%</h2>
+                        <div class="Yearly">
+                            <h3>Yearly</h3>
+                            <p>Activities</p>
+                        </div>
+                    </div>
+    
+                </div> <!-- charts end -->
+                <div class="tablewrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>No</td>
+                                <td>Course Name</td>
+                                <td>Department</td>
+                                <td>Units</td>
+                                <td>Gpa</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>Tax Academy Introduction</td>
+                                <td>Finances</td>
+                                <td>3</td>
+                                <td>4.3/5</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Transfer Pricing</td>
+                                <td>Customer Service</td>
+                                <td>3</td>
+                                <td>4.3/5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tax Academy for Beginners</td>
+                                <td>Purchasing</td>
+                                <td>3</td>
+                                <td>4.3/5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>New Business</td>
+                                <td>Finances</td>
+                                <td>3</td>
+                                <td>3.0/5</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tax Accounting</td>
+                                <td>Administration</td>
+                                <td>8</td>
+                                <td>4.7/5</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Motion Design</td>
+                                <td>IT Dep</td>
+                                <td>6</td>
+                                <td>4.4/5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>3D Modeling</td>
+                                <td>IT Dep</td>
+                                <td>3</td>
+                                <td>3.0/5</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Brand Strategy on Instagram</td>
+                                <td>Marketing</td>
+                                <td>3</td>
+                                <td>4.7/5</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div><!-- tablewrapper end -->
+                <div class="bannersection">
+                    <div class="textandbutton">
+                        <h1>When nothing goes right, go left</h1>
+                        <p>Build your skills with courses and degree online from</p>
+                        <p class="secondp">anywhere with professional instructors.</p>
+                        <div class="learnmorebutton">
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <img src="assets/img/female image.png" alt="female image">
+                </div>
+
+            </div> <!-- mainwrapper end -->
+            
+        </section><!-- main end -->
+    </div><!-- dashboard end -->
+    <script>
+        const ctx = document.getElementById('Daily').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+            
+                datasets: [{
+                    label: '# of Votes',
+                    data: [29, 71],
+                    backgroundColor: [
+                        '#00838F',
+                        '#A25075',
+                        
+                
+                    ],
+                
+                    cutout: "80%"
+                }]
+            },
+            
+           
+        });
+        const ctx1 = document.getElementById('Monthly').getContext('2d');
+        const myChart1 = new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+            
+                datasets: [{
+                    label: '# of Votes',
+                    data: [20, 80],
+                    backgroundColor: [
+                        '#00838F',
+                        '#A25075',
+                        
+                
+                    ],
+                
+                    cutout: "80%"
+                }]
+            },
+            
+           
+        });
+        const ctx2 = document.getElementById('Yearly').getContext('2d');
+        const myChart2 = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+            
+                datasets: [{
+                    label: '# of Votes',
+                    data: [88, 12],
+                    backgroundColor: [
+                        '#A25075',
+                        '#00838F',
+                        
+                
+                    ],
+                
+                    cutout: "80%"
+                }]
+            },
+            
+           
+        });
+        </script>
+</body>
+</html>
